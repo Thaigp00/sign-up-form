@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Norse';
+    src: url(./fonts/Norse-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Doppio One';
+    src: url(./fonts/DoppioOne-Regular.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: 100vh;
+    background: url(./images/background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.darken {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 25%;
+
+    & img {
+        width: 100px;
+    }
+
+    & h1 {
+        text-transform: uppercase;
+        font-family: 'Norse', 'Courier New', Courier, monospace;
+        font-size: 6rem;
+        color: white;
+    }
+}
+
+.image-link {
+    position: absolute;
+    bottom: 4px;
+    text-decoration: none;
+    font-family: 'Doppio One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
