@@ -8,6 +8,9 @@
     src: url(./fonts/DoppioOne-Regular.ttf);
 }
 
+:root {
+    --main-color: #228B22;
+}
 
 * {
     box-sizing: border-box;
@@ -67,4 +70,149 @@ body {
     text-decoration: none;
     font-family: 'Doppio One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-family: 'Doppio One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.25rem;
+
+    &>div {
+        flex: 1;
+        padding-left: 75px;
+
+        &:nth-child(odd) {
+            background-color: #F5F5F5;
+        }
+
+        &:first-child {
+            padding-top: 50px;
+
+            &>.text-content {
+                width: 50ch;
+
+                &>p:last-child {
+                    margin-top: 24px;
+                }
+            }
+        }
+
+        &.form-container {
+            flex: 20%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 1px 1px 3px black;
+            z-index: 1;
+
+            &>h3 {
+                padding: 12px 0 20px 0;
+            }
+
+            &>form {
+                flex: 1;
+            }
+
+            & ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                height: 100%;
+                padding-bottom: 24px;
+            }
+
+            & li {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                flex-basis: 40%;
+
+                &>label {
+                    text-transform: uppercase;
+                    color: rgba(0, 0, 0, 0.8);
+                }
+
+                &>input {
+                    font-size: 1.25rem;
+                    padding: 0.125rem 0.5rem;
+                    border: 1px solid rgba(0, 0, 0, 0.3);
+                    border-radius: 4px;
+
+                    &:invalid:not(:placeholder-shown):not(:focus) {
+                        border: 1px solid red;
+                    }
+
+                    &:focus {
+                        border: 1px solid blue;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            padding-top: 20px;
+
+            &>button {
+                padding: 0.75rem 3rem;
+                border: none;
+                border-radius: 8px;
+                font-size: 1.125rem;
+                font-weight: bold;
+                background-color: var(--main-color);
+                color: white;
+
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(1.1);
+                }
+
+                &:active {
+                    filter: brightness(0.9);
+                }
+            }
+
+            &>p {
+                margin-top: 20px;
+                font-size: 0.9rem;
+
+                &>a {
+                    text-decoration: none;
+                    color: var(--main-color);
+                }
+            }
+        }
+    }
+}
+
+.password-warning {
+    display: none;
+    font-size: 0.75rem;
+    color: red;
+}
+
+@media (max-width: 1064px) {
+    .image-container {
+        display: none;
+    }
+
+    .main-container {
+        align-items: center;
+
+        & > div {
+            padding: 48px !important;
+            width: 100vw;
+            text-align: center;
+
+            &:first-child {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    form ul {
+        justify-content: center;
+    }
 }

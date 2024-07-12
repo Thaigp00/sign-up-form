@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="image-container">
         <div class="darken"></div>
@@ -15,7 +17,52 @@
         </div>
         <a href="https://picjumbo.com/beautiful-nature-scenery-smartphone-wallpaper/" class="image-link">Photo Link</a>
     </div>
-    <div>
+    <div class="main-container">
+        <div>
+            <div class="text-content">
+                <p>This is not a real online service! You know you need something like this in your life to help you
+                    realize your deepest dreams. </p>
+                <p>Sign up now to get started.</p>
+                <p>You know you want to!</p>
+            </div>
+        </div>
+        <div class="form-container">
+            <h3>Let's do this!</h3>
+            <form action="#">
+                <ul>
+                    <li>
+                        <label for="first-name">First Name*</label>
+                        <input type="text" id="first-name" placeholder="John" required>
+                    </li>
+                    <li>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Doe">
+                    </li>
+                    <li>
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" placeholder="email@gmail.com" required>
+                    </li>
+                    <li>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="(XX) XXXX-XXXX">
+                    </li>
+                    <li>
+                        <label for="password">Password*</label>
+                        <input type="password" id="password" placeholder="Your password" required>
+                        <p class="password-warning">*Passwords do not match</p>
+                    </li>
+                    <li>
+                        <label for="confirm-password">Confirm Password*</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div>
+            <button type="button">Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
     </div>
 </body>
+
 </html>
